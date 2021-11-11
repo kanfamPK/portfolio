@@ -18,7 +18,7 @@ export class AppComponent {
         this.loopText =
           this.language === 1
             ? 'Welcome to my portfolio :)'
-            : 'Welcome các bạn tới xem :)';
+            : 'Welcome bạn đã tới xem :)';
         this.longLoopText = true;
       } else {
         this.loopText = 'Front-End Developer';

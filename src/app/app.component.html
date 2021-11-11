@@ -4,13 +4,13 @@
       <span
         (click)="language = 1"
         [ngClass]="{ bold: language === 1 ? true : false }"
-        >{{ language === 1 ? "english" : "Tiếng Anh" }}</span
+        >{{ language === 1 ? "English" : "Tiếng Anh" }}</span
       >
       /
       <span
         [ngClass]="{ bold: language === 2 ? true : false }"
         (click)="language = 2"
-        >{{ language === 1 ? "vietnamese" : "Tiếng Việt" }}</span
+        >{{ language === 1 ? "Vietnamese" : "Tiếng Việt" }}</span
       >
     </div>
     <div class="menu-btn" (click)="topBarExpand = !topBarExpand">
@@ -94,7 +94,7 @@
     <div class="company">
       <div
         class="icon lazy"
-        style="background-image: url(../assets/sts.jpg)"
+        style="background-image: url(./assets/sts.jpg)"
       ></div>
       <h4 class="company-name lazy">Saigon Technology Solution</h4>
       <h5 class="job-title lazy">Front-end Developer</h5>
@@ -109,7 +109,7 @@
     <div class="company">
       <div
         class="icon lazy"
-        style="background-image: url(../assets/fpt.png)"
+        style="background-image: url(./assets/fpt.png)"
       ></div>
       <h4 class="company-name lazy">FPT Software</h4>
       <h5 class="job-title lazy">Fullstack Software Developer</h5>
@@ -129,7 +129,7 @@
     <div class="company">
       <div
         class="icon lazy"
-        style="background-image: url(../assets/dxc.jpg)"
+        style="background-image: url(./assets/dxc.jpg)"
       ></div>
       <h4 class="company-name lazy">DXC Technology Vietnam</h4>
       <h5 class="job-title lazy">Java Developer</h5>
@@ -173,7 +173,7 @@
           >
         </div>
         <div class="lazy">
-          <img src="../assets/naki.png" width="100%" />
+          <img src="./assets/naki.png" width="100%" />
         </div>
       </div>
       <div class="jobseeker mb-5">
@@ -194,7 +194,7 @@
           >
         </div>
         <div class="lazy">
-          <img src="../assets/bootcareer.jpg" width="100%" />
+          <img src="./assets/bootcareer.jpg" width="100%" />
         </div>
       </div>
       <div class="game">
@@ -218,7 +218,7 @@
           ></iframe>
         </div>
         <div class="lazy">
-          <img src="../assets/game.png" width="100%" />
+          <img src="./assets/game.png" width="100%" />
         </div>
       </div>
     </div>
@@ -251,7 +251,7 @@
               <span style="margin-left: 15px">
                 {{
                   language === 1
-                    ? "Viet Nam, Binh Thanh Distric, Ho Chi Minh City"
+                    ? "Viet Nam, Binh Thanh District, Ho Chi Minh City"
                     : "Việt Nam, Quận Bình Thạnh, Tp.Hồ Chí Minh"
                 }}</span
               >
