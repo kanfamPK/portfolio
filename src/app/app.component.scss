@@ -1,0 +1,342 @@
+:host ::ng-deep {
+  scroll-behavior: smooth;
+  .top-bar {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(255, 167, 38);
+    position: fixed;
+    z-index: 9999;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+      .language {
+        span {
+          cursor: pointer;
+          font-style: italic;
+        }
+      }
+      .menu-btn {
+        cursor: pointer;
+      }
+    }
+    .dropdown {
+      position: absolute;
+      background-color: rgb(243, 246, 246);
+      height: 0px;
+      width: 100%;
+      transition: all 0.5s;
+      box-shadow: rgb(44 62 80) 0px 1px 2px -1px;
+      .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        span {
+          padding-left: 15px;
+          cursor: pointer;
+          font-size: 18px;
+          display: none;
+        }
+      }
+      &.show {
+        height: 80px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .header {
+    height: 60vh;
+    width: 100%;
+    background: url("../assets/bg1.jpg");
+    background-size: cover;
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(44, 62, 80, 0.4);
+      display: flex;
+      .container {
+        padding-top: 20vh;
+        .name {
+          color: rgb(248, 248, 255);
+          font-size: 75px;
+          font-family: Georgia, Times, "Times New Roman", serif;
+        }
+        .loop-text {
+          color: rgb(248, 248, 255);
+          font-family: Georgia, Times, "Times New Roman", serif;
+          font-size: 35px;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 0.15em solid orange;
+          animation: typing 4s steps(30, end) infinite,
+            blink-caret 0.5s step-end infinite;
+          width: 340px;
+          &.long-txt {
+            width: 420px;
+            animation: typing2 4s steps(30, end) infinite,
+              blink-caret 0.5s step-end infinite;
+          }
+        }
+        @keyframes typing {
+          0% {
+            width: 0;
+          }
+          40% {
+            width: 340px;
+          }
+        }
+
+        @keyframes typing2 {
+          0% {
+            width: 0;
+          }
+          40% {
+            width: 420px;
+          }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+          from,
+          to {
+            border-color: transparent;
+          }
+          50% {
+            border-color: orange;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    width: 100%;
+    .about-me {
+      width: 100%;
+      margin-top: -20vh;
+      margin-bottom: 50px;
+      .container {
+        div:first-child {
+          padding: 15px;
+          background-color: rgb(255, 167, 38);
+          color: rgb(44, 62, 80);
+          font-size: 35px;
+          font-family: Georgia, Times, "Times New Roman", serif;
+        }
+        div:last-child {
+          background-color: white;
+          padding: 15px;
+          font-size: 18px;
+          font-style: italic;
+        }
+      }
+    }
+    .exp {
+      position: relative;
+      height: 100%;
+      padding-left: 50px;
+      .top-title {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
+      .start-icon {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        border-radius: 50%;
+        left: 5px;
+        top: calc(100% + 20px);
+        background: url("../assets/start.jpg");
+        background-size: cover;
+        box-shadow: rgb(16 204 82) 0px 0px 0px 3px,
+          rgb(16 204 82) 0px 2px 0px inset, rgb(16 204 82) 0px 3px 0px 4px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        height: 100%;
+        width: 4px;
+        left: 35px;
+        margin-left: -2px;
+        background: rgb(189, 195, 199);
+      }
+      .company {
+        position: relative;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 0 #ddd;
+        padding: 20px 0;
+        border-top: 4px solid rgb(255, 167, 38);
+        margin-left: 30px;
+        .icon {
+          width: 60px;
+          height: 60px;
+          background-size: cover;
+          position: absolute;
+          border-radius: 50%;
+          left: -76px;
+          top: -6px;
+          box-shadow: rgb(255 167 38) 0px 0px 0px 3px,
+            rgb(0 0 0 / 8%) 0px 2px 0px inset, rgb(0 0 0 / 5%) 0px 3px 0px 4px;
+        }
+        .company-name {
+          margin-bottom: 3px;
+        }
+        .job-title {
+          font-style: italic;
+          color: rgb(105, 105, 105);
+        }
+        .skills {
+          font-weight: bold;
+        }
+        .content {
+          margin-left: 0px;
+          margin-bottom: 20px;
+        }
+        .time {
+          text-align: end;
+          font-weight: 700;
+          opacity: 0.7;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+    .contact {
+      width: 100%;
+      margin-top: 15vh;
+      margin-bottom: 50px;
+      .container {
+        div {
+          background-color: white;
+          padding: 15px;
+          font-size: 18px;
+          font-style: italic;
+        }
+      }
+    }
+
+    .projects {
+      margin-top: 15vh;
+      .title, .sub-title {
+        text-align: center;
+        font-family: "open sans", Tahoma, Verdana, Arial, sans-serif;
+      }
+      .sub-title {
+        color: #787878;
+      }
+      .content {
+        margin-top: 25px;
+      }
+      .name {
+        font-style: italic;
+      }
+      .skills {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .lazy {
+    opacity: 0;
+  }
+
+  .animate {
+    animation: appear 1.25s;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    .header {
+      background: url("../assets/bg2.jpg");
+      background-size: cover;
+      .overlay {
+        .container {
+          .name {
+            font-size: 50px;
+          }
+          .loop-text {
+            font-size: 22px;
+            width: 215px;
+            animation: typing3 4s steps(30, end) infinite,
+              blink-caret 0.5s step-end infinite;
+            &.long-txt {
+              width: 266px;
+              animation: typing4 4s steps(30, end) infinite,
+                blink-caret 0.5s step-end infinite;
+            }
+          }
+        }
+      }
+    }
+    .main {
+      .exp {
+        padding-left: 60px;
+        padding-right: 35px;
+        &::before {
+          left: 35px;
+        }
+        .start-icon {
+          left: 15px;
+          width: 40px;
+          height: 40px;
+        }
+        .company {
+          .icon {
+            width: 40px;
+            height: 40px;
+          }
+          .company-name {
+            font-size: 18px;
+          }
+          .job-title {
+            font-size: 16px;
+          }
+          .skills {
+            font-size: 13px;
+          }
+          .content {
+            font-size: 13px;
+          }
+          .time {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes typing3 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 215px;
+  }
+}
+
+@keyframes typing4 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 266px;
+  }
+}
