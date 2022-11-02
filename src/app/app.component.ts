@@ -8,20 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolio';
   topBarExpand = false;
-  loopText = 'Front-End Developer';
+  loopText = 'Web Developer';
   longLoopText = false;
   language = 1;
 
   ngOnInit(): void {
     setInterval(() => {
-      if (this.loopText === 'Front-End Developer') {
+      if (this.loopText === 'Web Developer') {
         this.loopText =
           this.language === 1
             ? 'Welcome to my portfolio :)'
             : 'Welcome bạn đã tới xem :)';
         this.longLoopText = true;
       } else {
-        this.loopText = 'Front-End Developer';
+        this.loopText = 'Web Developer';
         this.longLoopText = false;
       }
     }, 4000);
