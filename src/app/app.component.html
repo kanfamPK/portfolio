@@ -30,6 +30,11 @@
         >{{ language === 1 ? "About" : "Về Khán" }}</span
       >
       <span
+        (click)="navigateToSection('skill')"
+        style="font-style: italic; font-weight: bold; font-size: 16px"
+        >{{ language === 1 ? "Skills" : "Kỹ năng" }}</span
+      >
+      <span
         (click)="navigateToSection('exp')"
         style="font-style: italic; font-weight: bold; font-size: 16px"
         >{{ language === 1 ? "Experience" : "Kinh nghiệm" }}</span
@@ -87,8 +92,58 @@
       </div>
     </div>
   </div>
+  <div class="skill" id="skill">
+    <div class="container lazy">
+      <div class="text-center top-title text-uppercase">
+        {{ language === 1 ? "Skills" : "Kỹ năng" }}
+      </div>
+
+      <div class="skills-container">
+        <div class="col-md-6" data-scroll-reveal="enter from the left after .5s">
+            <div class="section-box">
+                <h5 class="box-title">Programming languages</h5>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Typescript</li>
+                    <li>HTML, CSS</li>
+                    <li>Java</li>
+                    <li>Solidity</li>
+                </ul>
+                <h5 class="box-title">Frameworks</h5>
+                <ul>
+                    <li>NodeJS, NestJS, SailsJS</li>
+                    <li>Angular2+</li>
+                    <li>Bootstrap / Materialize CSS</li>
+                    <li>ReactJS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6" data-scroll-reveal="enter from the right after .5s">
+            <div class="section-box">
+                <h5 class="box-title">Database</h5>
+                <ul>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                </ul>
+                <h5 class="box-title">Version Control</h5>
+                <ul>
+                  <li>Git (Git Shell &amp; Github)</li>
+                </ul>
+                <h5 class="box-title">DevOps</h5>
+                <ul>
+                  <li>Nginx</li>
+                  <li>Docker</li>
+                  <li>Kubernetes</li>
+                  <li>DigitalOcean Platform</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
   <div class="exp container" id="exp">
-    <div class="text-center top-title">
+    <div class="text-center top-title text-uppercase">
       {{ language === 1 ? "Experiences" : "Kinh nghiệm" }}
     </div>
     <div class="company">
@@ -96,7 +151,7 @@
         class="icon lazy"
         style="background-image: url(./assets/s3.jpg)"
       ></div>
-      <h4 class="company-name lazy">S3 Innovate</h4>
+      <h5 class="company-name lazy">S3 Innovate</h5>
       <h5 class="job-title lazy">Fullstack Developer</h5>
       <div class="skills mt-3 mb-3 lazy">Skills: NestJS, SailsJS, Angular 13, Docker, Kubernetes, PostgreSQL</div>
       <div class="content lazy">
@@ -115,7 +170,7 @@
         class="icon lazy"
         style="background-image: url(./assets/sts.jpg)"
       ></div>
-      <h4 class="company-name lazy">Saigon Technology</h4>
+      <h5 class="company-name lazy">Saigon Technology</h5>
       <h5 class="job-title lazy">Front-end Developer</h5>
       <div class="skills mt-3 mb-3 lazy">Skills: Angular 12, NgRx 12, RxJs 6, Nx 12, GraphQL, Cypress 9</div>
       <div class="content lazy">
@@ -132,7 +187,7 @@
         class="icon lazy"
         style="background-image: url(./assets/fpt.png)"
       ></div>
-      <h4 class="company-name lazy">FPT Software</h4>
+      <h5 class="company-name lazy">FPT Software</h5>
       <h5 class="job-title lazy">Fullstack Software Developer</h5>
       <div class="skills mt-3 mb-3 lazy">
         Skills: Angular 8, NodeJs, ExpressJs, GraphQL, PostgresSQL, Microsoft
@@ -152,7 +207,7 @@
         class="icon lazy"
         style="background-image: url(./assets/dxc.jpg)"
       ></div>
-      <h4 class="company-name lazy">DXC Technology Vietnam</h4>
+      <h5 class="company-name lazy">DXC Technology Vietnam</h5>
       <h5 class="job-title lazy">Java Developer</h5>
       <div class="skills mt-3 mb-3 lazy">
         Skills: Java 8, Spring Boot, Angular 8, Elasticsearch
@@ -169,7 +224,7 @@
     <div class="start-icon lazy"></div>
   </div>
   <div class="projects container" id="project">
-    <h2 class="title">
+    <h2 class="title text-uppercase">
       {{ language === 1 ? "Pet Projects" : "Dự án cá nhân" }}
     </h2>
     <h5 class="sub-title">
@@ -177,7 +232,7 @@
     </h5>
     <div class="content">
       <div class="naki mb-5">
-        <h4 class="name lazy">Bếp Của Bul</h4>
+        <h5 class="name lazy">Bếp Của Bul</h5>
         <div class="skills lazy">
           Skills: Angular 12, Nx, Ngrx
         </div>
@@ -197,7 +252,7 @@
         </div>
       </div>
       <div class="naki mb-5">
-        <h4 class="name lazy">Naki Handmade</h4>
+        <h5 class="name lazy">Naki Handmade</h5>
         <div class="skills lazy">
           Skills: Angular 12, Typescript, Nodejs, Express, MongoDB, Jasmine
           Testing, Nginx, Digital Ocean
@@ -218,7 +273,7 @@
         </div>
       </div>
       <div class="jobseeker mb-5">
-        <h4 class="name lazy">Bootcareer</h4>
+        <h5 class="name lazy">Bootcareer</h5>
         <div class="skills lazy">
           Skills: React CRA, Typescript, Nodejs, Express, MongoDB, Redux
           Toolkit, Storybook, React Testing library, CircleCI, Netlify,
@@ -239,7 +294,7 @@
         </div>
       </div>
       <div class="game">
-        <h4 class="name lazy">Space Shooter</h4>
+        <h5 class="name lazy">Space Shooter</h5>
         <div class="skills lazy">Skills: Unity 2018, C#</div>
         <div class="mt-3 mb-3 lazy" style="color: rgb(44, 62, 80)">
           {{

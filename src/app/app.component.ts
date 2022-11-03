@@ -57,35 +57,9 @@ export class AppComponent {
 
   navigateToSection(element: string): void {
     this.topBarExpand = false;
-    switch (element) {
-      case 'about': {
-        let elmnt: HTMLElement | null = document.getElementById('about');
-        if (elmnt) {
-          elmnt.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        }
-        break;
-      }
-      case 'exp': {
-        let elmnt: HTMLElement | null = document.getElementById('exp');
-        if (elmnt) {
-          elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        break;
-      }
-      case 'project': {
-        let elmnt: HTMLElement | null = document.getElementById('project');
-        if (elmnt) {
-          elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        break;
-      }
-      case 'contact': {
-        let elmnt: HTMLElement | null = document.getElementById('contact');
-        if (elmnt) {
-          elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        break;
-      }
+    let elmnt: HTMLElement | null = document.getElementById(element);
+    if (elmnt) {
+      elmnt.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   }
 }
