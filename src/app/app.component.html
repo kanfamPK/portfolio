@@ -25,22 +25,22 @@
   >
     <div class="container">
       <span
-        (click)="navigateToSection('about')"
+        (click)="navigateToSection('intro-container')"
         style="font-style: italic; font-weight: bold; font-size: 16px"
         >{{ language === 1 ? "About" : "Về Khán" }}</span
       >
       <span
-        (click)="navigateToSection('skill')"
+        (click)="navigateToSection('skill-scroll-point')"
         style="font-style: italic; font-weight: bold; font-size: 16px"
         >{{ language === 1 ? "Skills" : "Kỹ năng" }}</span
       >
       <span
-        (click)="navigateToSection('exp')"
+        (click)="navigateToSection('reactJS')"
         style="font-style: italic; font-weight: bold; font-size: 16px"
         >{{ language === 1 ? "Experience" : "Kinh nghiệm" }}</span
       >
       <span
-        (click)="navigateToSection('project')"
+        (click)="navigateToSection('start-icon')"
         style="font-style: italic; font-weight: bold; font-size: 16px"
         >{{ language === 1 ? "Projects" : "Dự án" }}</span
       >
@@ -54,7 +54,7 @@
 </div>
 <div class="header">
   <div class="overlay">
-    <div class="container">
+    <div id="intro-container" class="container">
       <div class="name">{{ language === 1 ? "Khan Pham" : "Khán Phạm" }}</div>
       <div class="loop-text" [ngClass]="{ 'long-txt': longLoopText }">
         {{ loopText }}
@@ -69,7 +69,7 @@
       <div>
         {{
           language === 1
-            ? "I am a Software Developer with 3 years experience specializing in JavaScript. Interested in devising a better problem‐solving method for challenging tasks, and learning new technologies and tools if the need arises. On the other hand, I am a open-minded person with can-do attitude and i can communicate in English well enough."
+            ? "I am a Web Developer with 3 years experience specializing in JavaScript. Interested in devising a better problem‐solving method for challenging tasks, and learning new technologies and tools if the need arises. On the other hand, I am a open-minded person with can-do attitude and i can communicate in English well enough."
             : "Là một lập trình viên với 3 năm kinh nghiệm, đặc biệt với JavaScript. Mình cực kì hứng thú với việc nghiên cứu nhiều công nghệ và công cụ lập trình mới và suy nghĩ về nhiều cách để cải tiến hoàn thiện phần mềm và quy trình phần mềm. Mình cũng là người có tinh thần cởi mở và tâm thế luôn sẵn sàng cho công việc, tiếng anh mình đủ tốt để có thể giao tiếp trong công việc."
         }}
         <br /><br />
@@ -92,6 +92,7 @@
       </div>
     </div>
   </div>
+  <div id="skill-scroll-point" style="height: 50px;"></div>
   <div class="skill" id="skill">
     <div class="container lazy">
       <div class="text-center top-title text-uppercase">
@@ -114,7 +115,7 @@
                     <li>NodeJS, NestJS, SailsJS</li>
                     <li>Angular2+</li>
                     <li>Bootstrap / Materialize CSS</li>
-                    <li>ReactJS</li>
+                    <li id="reactJS">ReactJS</li>
                 </ul>
             </div>
         </div>
@@ -221,7 +222,7 @@
       </div>
       <div class="time lazy">10/2019 - 8/2020</div>
     </div>
-    <div class="start-icon lazy"></div>
+    <div id="start-icon" class="start-icon lazy"></div>
   </div>
   <div class="projects container" id="project">
     <h2 class="title text-uppercase">

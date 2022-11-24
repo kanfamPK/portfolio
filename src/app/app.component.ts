@@ -59,7 +59,7 @@ export class AppComponent {
     this.topBarExpand = false;
     let elmnt: HTMLElement | null = document.getElementById(element);
     if (elmnt) {
-      elmnt.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
